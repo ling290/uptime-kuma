@@ -20,7 +20,9 @@ RUN ls -al
 
 # 创建data文件夹并移动kuma.db
 RUN mkdir -p /home/app/uptime-kuma/data
+RUN mkdir -p /home/app/uptime-kuma/data/upload/
 RUN mv /home/app/data/uptime-kuma/db/kuma.db /home/app/uptime-kuma/data/
+RUN mv /home/app/data/uptime-kuma/upload/logo1.png /home/app/uptime-kuma/data/upload/
 RUN echo "=============== 遍历 /home/app/uptime-kuma/data/ 路径下的内容 ==============="
 RUN ls -al /home/app/uptime-kuma/data/
 
