@@ -10,15 +10,16 @@ WORKDIR /home/app
 RUN git clone https://github.com/ling290/uptime-kuma.git
 WORKDIR /home/app/uptime-kuma
 
-RUN echo "================================================================="
-RUN ls -al
-RUN echo "================================================================="
+RUN echo "=============== 列出当前工作所在的路径 ==============="
 RUN pwd
-RUN echo "================================================================="
+RUN echo "=============== 遍历当前工作所在的路径下的内容 ==============="
+RUN ls -al
 
 # 创建data文件夹并移动kuma.db
 RUN mkdir -p /home/app/uptime-kuma/data
 RUN mv /home/app/uptime-kuma/db/kuma.db /home/app/uptime-kuma/data/
+RUN echo "=============== 遍历 /home/app/uptime-kuma/data/ 路径下的内容 ==============="
+RUN ls -al /home/app/uptime-kuma/data/
 
 RUN npm run setup
 
