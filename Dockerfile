@@ -9,6 +9,9 @@ WORKDIR /home/app
 
 RUN git clone https://github.com/louislam/uptime-kuma.git
 WORKDIR /home/app/uptime-kuma
+RUN echo "================================================================="
+RUN ls -al
+RUN pwd
 RUN npm run setup
 
 EXPOSE 3001
