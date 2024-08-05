@@ -7,7 +7,7 @@ RUN adduser -D app
 USER app
 WORKDIR /home/app
 
-RUN git clone https://github.com/louislam/uptime-kuma.git
+RUN git clone https://github.com/ling290/uptime-kuma.git
 WORKDIR /home/app/uptime-kuma
 
 RUN echo "================================================================="
