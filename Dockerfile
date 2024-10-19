@@ -12,8 +12,8 @@ RUN ls -al /app/
 RUN cp -r /app/db/* /app/data/
 RUN echo '查看是否复制数据库成功：@@@@@@@@@@@@@@@@@@@@@@@@'
 RUN ls -al /app/data/
+
 WORKDIR /app/
-RUN cp -r /app/db/* /app/data/
 RUN npm run setup
 
 EXPOSE 3001
